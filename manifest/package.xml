@@ -22,6 +22,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -30,7 +34,7 @@
     </types>
     <types>
         <members>*</members>
-        <name>FlowCategory</name>
+        <name>Flow</name>
     </types>
     <types>
         <members>*</members>
