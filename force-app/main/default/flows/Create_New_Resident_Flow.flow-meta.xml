@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <decisions>
+        <name>Create_New_or_Found_Existing</name>
+        <label>Create New or Found Existing</label>
+        <locationX>664</locationX>
+        <locationY>53</locationY>
+        <defaultConnector>
+            <targetReference>Create_New_Resident_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create New</defaultConnectorLabel>
+        <rules>
+            <name>Found_Existing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Check_if_Resident_Already_Exists</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Resident_Exists_Screen</targetReference>
+            </connector>
+            <label>Found Existing</label>
+        </rules>
+    </decisions>
+    <description>Add a resident to our system, checking for duplicate</description>
+    <interviewLabel>Create New Resident Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create New Resident Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_New_Resident_Record</name>
+        <label>Create New Resident Record</label>
+        <locationX>593</locationX>
+        <locationY>206</locationY>
+        <connector>
+            <targetReference>Resident_Created_Successfully</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>First_Name__c</field>
+            <value>
+                <elementReference>Input_New_Resident_Name.firstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Name__c</field>
+            <value>
+                <elementReference>Input_New_Resident_Name.lastName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>{!Input_New_Resident_Name.firstName} {!Input_New_Resident_Name.lastName}</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Resident__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Check_if_Resident_Already_Exists</name>
+        <label>Check if Resident Already Exists</label>
+        <locationX>512</locationX>
+        <locationY>68</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_New_or_Found_Existing</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>First_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Input_New_Resident_Name.firstName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Last_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Input_New_Resident_Name.lastName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Resident__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Add_New_Resident_Screen</name>
+        <label>Add New Resident Screen</label>
+        <locationX>400</locationX>
+        <locationY>66</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Check_if_Resident_Already_Exists</targetReference>
+        </connector>
+        <fields>
+            <name>Input_New_Resident_Name</name>
+            <extensionName>flowruntime:name</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Resident_Created_Successfully</name>
+        <label>Resident Created Successfully</label>
+        <locationX>582</locationX>
+        <locationY>332</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Resident_added_message</name>
+            <fieldText>&lt;p&gt;{!Input_New_Resident_Name.firstName} {!Input_New_Resident_Name.lastName} was added to the database with ID {!Create_New_Resident_Record}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Resident_Exists_Screen</name>
+        <label>Resident Exists Screen</label>
+        <locationX>790</locationX>
+        <locationY>202</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Resident_Exists_message</name>
+            <fieldText>&lt;p&gt;{!Check_if_Resident_Already_Exists.First_Name__c} {!Check_if_Resident_Already_Exists.Last_Name__c} is already in the database.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Add_New_Resident_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>
