@@ -26,7 +26,15 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Security</members>
+        <name>Settings</name>
     </types>
     <types>
         <members>*</members>
