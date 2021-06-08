@@ -29,9 +29,18 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>Leasing_Office</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>*</members>
         <name>CustomObject</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    
     <types>
         <members>*</members>
         <name>Flow</name>
@@ -39,6 +48,10 @@
     <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>*</members>
