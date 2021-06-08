@@ -40,5 +40,9 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
     <version>51.0</version>
 </Package>
