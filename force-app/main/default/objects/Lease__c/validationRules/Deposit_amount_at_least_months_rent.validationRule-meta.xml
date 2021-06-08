@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposit_amount_at_least_months_rent</fullName>
+    <active>true</active>
+    <errorConditionFormula>Deposit__c &lt;  Rent__c</errorConditionFormula>
+    <errorMessage>Security Deposit must be at least one month&apos;s rent</errorMessage>
+</ValidationRule>

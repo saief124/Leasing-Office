@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Prepare for Move In</fullName>
+        <actions>
+            <name>Prepare_House</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>House__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Unavailable</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Prepare_House</fullName>
+        <assignedTo>lmclemail@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>A house has become vacant! Prepare it for the next tennant to move in</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Prepare House</subject>
+    </tasks>
+</Workflow>
