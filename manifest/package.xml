@@ -64,6 +64,11 @@
         <members>Security</members>
         <name>Settings</name>
     </types>
+       <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    
     <types>
         <members>*</members>
         <name>StaticResource</name>
