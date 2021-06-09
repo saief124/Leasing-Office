@@ -5,7 +5,6 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
- 
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>

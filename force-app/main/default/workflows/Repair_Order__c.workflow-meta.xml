@@ -10,5 +10,4 @@
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
-
 </Workflow>
