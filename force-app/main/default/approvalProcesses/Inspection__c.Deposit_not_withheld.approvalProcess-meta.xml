@@ -5,14 +5,7 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>erinjdixon@gmail.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>lmclemail@yahoo.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
+ 
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
