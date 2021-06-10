@@ -10,16 +10,4 @@
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
-    <tasks>
-        <fullName>Prepare_House</fullName>
-        <assignedTo>lmclemail@yahoo.com</assignedTo>
-        <assignedToType>user</assignedToType>
-        <description>A house has become vacant! Prepare it for the next tennant to move in</description>
-        <dueDateOffset>5</dueDateOffset>
-        <notifyAssignee>false</notifyAssignee>
-        <priority>High</priority>
-        <protected>false</protected>
-        <status>Not Started</status>
-        <subject>Prepare House</subject>
-    </tasks>
 </Workflow>
