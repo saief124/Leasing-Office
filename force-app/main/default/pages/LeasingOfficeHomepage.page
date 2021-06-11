@@ -1,0 +1,31 @@
+<apex:page >
+    <apex:stylesheet value="{!$Resource.Style}"/>
+    <header>
+        <div id="logo_div">
+            <apex:image value="{!$Resource.LeasingOfficeLogo}" />
+        </div>
+    </header>
+    <div id="navbar_div">
+        <nav class="nav_bar">
+            <ul class="nav_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Repair Orders</a></li>
+                <li><a href="{!$Page.AccountManagement}">Account Management</a></li>
+                <li><a href="#">Prospective Residents</a></li>
+                <li><a href="#">Partnership Program</a></li>
+            </ul>
+        </nav>
+    </div>
+    <center>
+        <div class="login_form">
+            <apex:pageBlock >
+                <apex:pageBlockSection collapsible="false" columns="1" title="Login">
+                    <c:SiteLogin id="siteLogin"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </div>
+    </center>
+    <footer>
+        <a class="cta" href="mailto:example@company.com">Contact Us</a>
+    </footer>
+</apex:page>

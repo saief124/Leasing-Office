@@ -1,0 +1,72 @@
+header {
+    padding:10px 30%;
+    height: 5%;
+    background-color: #8d8d8d;
+}
+body{
+    background-color: #bce3f3;
+}
+img{
+    width: 250px;
+    height: 60px;
+}
+#logo_div{
+    display: flex;
+    justify-content: center;
+}
+#navbar_div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #9f9f9f;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.nav_links li a:hover{
+    color: #191970;	
+    
+}
+.nav_links li a{
+    color: #bce3f3;	
+    
+}
+.nav_bar{
+    margin: auto;
+    width: 60%;
+}
+.cta{
+    padding-left: 48%;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+}
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+.login_form{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+#account_details{
+    display: block;
+    width: 250px;
+    justify-content: center;
+}

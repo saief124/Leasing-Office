@@ -2,6 +2,10 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <rules>
         <fullName>Prepare for Move In</fullName>
+        <actions>
+            <name>Prepare_House</name>
+            <type>Task</type>
+        </actions>
         <active>true</active>
         <criteriaItems>
             <field>House__c.Status__c</field>
@@ -10,4 +14,15 @@
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
+    <tasks>
+        <fullName>Prepare_House</fullName>
+        <assignedTo>lmclemail2@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Prepare House</subject>
+    </tasks>
 </Workflow>
