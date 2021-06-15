@@ -9,6 +9,10 @@
         <apexClass>MyFirstClass</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>RepairOrderController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>false</editable>
@@ -175,6 +179,10 @@
         <field>Resident__c.Lease__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <pageAccesses>
+        <apexPage>RepairOrderList</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Bank__c</tab>
         <visibility>DefaultOff</visibility>

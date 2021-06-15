@@ -1,0 +1,32 @@
+<apex:page controller="RepairOrderController">
+    <apex:form >
+    	<apex:pageBlock title="Repair Orders" id="repair_orders_table">
+            <apex:pageBlockTable value="{!RepairOrders}" var="order">
+            	<apex:column value="{!order.Name }">
+    				<apex:facet name="header">Description</apex:facet>
+				</apex:column>
+                <apex:column value="{!order.Status__c }">
+    				<apex:facet name="header">
+        				<apex:commandLink action="{!sortByStatus}"
+            			reRender="repair_orders_table">Status
+        				</apex:commandLink>
+    				</apex:facet>
+				</apex:column>
+                <apex:column value="{!order.House__c }">
+    				<apex:facet name="header">
+        				<apex:commandLink action="{!sortByHouse}"
+            			reRender="repair_orders_table">Location
+        				</apex:commandLink>
+    				</apex:facet>
+				</apex:column>
+                <apex:column value="{!order.Date_Opened__c }">
+    				<apex:facet name="header">
+        				<apex:commandLink action="{!sortByDate}"
+            			reRender="repair_orders_table">Date Submitted
+        				</apex:commandLink>
+    				</apex:facet>
+				</apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
