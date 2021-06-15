@@ -29,6 +29,9 @@
                     <apex:outputText value="{!res.First_Name__c}"/>
                     <apex:outputText value="{!res.Last_Name__c}"/>
                     <apex:outputField value="{!res.Lease__r.Name}"/>
+                    <apex:outputField value="{!res.Lease__r.Start_Date__c}"/>
+                    <apex:outputField value="{!res.Lease__r.End_Date__c}"/>
+                    <apex:outputField value="{!res.Lease__r.Rent__c}"/>
                 </apex:pageBlockSection>
             </apex:pageBlock>
         </div>

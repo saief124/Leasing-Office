@@ -5,6 +5,7 @@ header {
 }
 body{
     background-color: #bce3f3;
+    padding-bottom: 100px;
 }
 img{
     width: 250px;
@@ -44,10 +45,8 @@ img{
     width: 60%;
 }
 .cta{
-    padding-left: 48%;
-    padding-bottom: 20px;
-    position: fixed;
-    bottom: 0;
+    padding-left: 49%;
+    position: relative;
 }
 button {
     padding: 9px 25px;
