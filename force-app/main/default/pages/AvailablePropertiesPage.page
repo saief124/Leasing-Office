@@ -4,7 +4,7 @@
         <div id="logo_div">
             <apex:image value="{!$Resource.LeasingOfficeLogo}" />
         </div>
-    </header>
+    </header> 
     <div id="navbar_div">
         <nav class="nav_bar">
             <ul class="nav_links">

@@ -2,7 +2,7 @@ public with sharing class PropertyControllerExtension {
     public String propIdChosen{get;set;}
         
     public PropertyControllerExtension(ApexPages.StandardSetController stdController) {
-		
+		 
     }
     
     public PageReference makeOffer() {

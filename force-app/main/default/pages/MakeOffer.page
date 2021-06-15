@@ -12,7 +12,7 @@
                 <li><a href="{!$Page.CommunitiesLanding}">Repair Orders</a></li>
                 <li><a href="#">Account Management</a></li>
                 <li><a href="#">Prospective Residents</a></li>
-                <li><a href="#">Partnership Program</a></li>
+                <li><a href="#">Partnership Program</a></li> 
             </ul>
         </nav>
     </div>

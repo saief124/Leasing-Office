@@ -9,7 +9,7 @@ public with sharing class OfferControllerExtension {
 		this.offer = new Offer__c();
     }
     
-    public PageReference saveOffer() {
+    public PageReference saveOffer() { 
         // find or create contact
         String fullName = this.fname + ' ' + this.lname;
         List<Contact> cons = [SELECT Id FROM Contact WHERE Name=:fullName LIMIT 1];
