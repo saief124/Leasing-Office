@@ -16,7 +16,7 @@
     </rules>
     <tasks>
         <fullName>Clean_House</fullName>
-        <assignedTo>lmclemail@yahoo.com</assignedTo>
+        <assignedTo>lmclemail2@yahoo.com</assignedTo>
         <assignedToType>user</assignedToType>
         <dueDateOffset>2</dueDateOffset>
         <notifyAssignee>false</notifyAssignee>

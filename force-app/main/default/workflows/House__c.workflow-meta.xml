@@ -16,9 +16,8 @@
     </rules>
     <tasks>
         <fullName>Prepare_House</fullName>
-        <assignedTo>lmclemail@yahoo.com</assignedTo>
+        <assignedTo>lmclemail2@yahoo.com</assignedTo>
         <assignedToType>user</assignedToType>
-        <description>A house has become vacant! Prepare it for the next tennant to move in</description>
         <dueDateOffset>5</dueDateOffset>
         <notifyAssignee>false</notifyAssignee>
         <priority>High</priority>

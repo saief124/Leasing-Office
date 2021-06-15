@@ -1,0 +1,42 @@
+<apex:page controller="Residents">
+    <apex:stylesheet value="{!$Resource.Style}"/>
+    <header>
+        <div id="logo_div">
+            <apex:image value="{!$Resource.LeasingOfficeLogo}" />
+        </div>
+    </header>
+    <div id="navbar_div">
+        <nav class="nav_bar">
+            <ul class="nav_links">
+                <li><a href="{!$Page.LeasingOfficeHomepage}">Home</a></li>
+                <li><a href="{!$Page.CommunitiesLanding}">Repair Orders</a></li>
+                <li><a href="#">Account Management</a></li>
+                <li><a href="#">Prospective Residents</a></li>
+                <li><a href="#">Partnership Program</a></li>
+            </ul>
+        </nav>
+    </div>
+    <apex:pageBlock >
+        <apex:outputText value="Logged in as: {!$User.FirstName&' '&$User.LastName}" />
+    </apex:pageBlock>
+    <center>
+        <h1>
+            Your Account
+        </h1>
+        <div id="account_details">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1">
+                    <apex:outputText value="{!res.First_Name__c}"/>
+                    <apex:outputText value="{!res.Last_Name__c}"/>
+                    <apex:outputField value="{!res.Lease__r.Name}"/>
+                    <apex:outputField value="{!res.Lease__r.Start_Date__c}"/>
+                    <apex:outputField value="{!res.Lease__r.End_Date__c}"/>
+                    <apex:outputField value="{!res.Lease__r.Rent__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </div>
+    </center>
+    <footer>
+        <a class="cta" href="mailto:example@company.com">Contact Us</a>
+    </footer>
+</apex:page>
