@@ -642,6 +642,9 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>UnderConstruction</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>PartnershipPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
