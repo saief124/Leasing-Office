@@ -1,0 +1,134 @@
+<apex:page standardController="Partnership_Request__c">
+    
+    <apex:stylesheet value="{!$Resource.Style1}"/>
+    
+    <body style="background-color: lightblue">
+        
+         <header>
+             <div id="logo_div">
+                  <apex:image value="{!$Resource.LeaseLogo}"/>
+             </div> 
+        </header>
+        
+        <div id="navbar_div">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="/"><font style="font-size: 13px">Home</font></a></li>
+                    <!--<li><a href="{!$Page.jQueryMobileResources">Products</a></li>-->
+                    <li><a href="#"><font style="font-size: 13px">Repair Orders</font></a></li>
+                    <li><a href="#"><font style="font-size: 13px">Account Management</font></a></li>
+                    <li><a href="#"><font style="font-size: 13px">Prospective Residents</font></a></li>
+                    <li><a href="#"><font style="font-size: 13px">Partnership Program</font></a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+        
+        <div id="h1_div">
+             <h1>
+                 About Partnership Program
+             </h1>
+            <p>
+                The partnership program is open to any resident or friends/family of the resident that owns property and wants
+                the McLeaserson Management Co. to manage said property. The request process is easy. All you have to do is fill out the
+                form at the bottom of this page, await for our approval, and from there we can take the next few steps to get everything in
+                order so we can provide the best service to you or anyone you refer to us. All details about how everything works will be given
+                after the approval process.
+            </p>
+        </div>
+        
+        <div id="form_div">
+            <h2>
+                Partnership Program Form
+            </h2>
+            <apex:form >
+                <table style="margin-top: 60px ;margin-right: auto; margin-left: auto;">
+                    <tr>
+                        <td align="right"><font><b>Name:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Name}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Email:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Email__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Phone Number:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Phone_Number__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                     <tr>
+                        <td align="right" style="vertical-align: top"><font><b>Address:   </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Address__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>City:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.City__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>State:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.State__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Zip Code:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Zip_Code__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Year Built:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Year_Built__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Years Owned:  </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Years_Owned__c}"/></td>
+                    </tr>
+                    
+                    <tr><td><br/></td></tr>
+                    
+                    <tr>
+                        <td align="right"><font><b>Build Status:   </b></font></td>
+                        <td align="left"><apex:inputField value="{!Partnership_Request__c.Build_Status__c}"/></td>
+                    </tr>
+                </table>
+                
+                <br/>
+                <br/>
+                
+                <apex:commandButton value="Submit" action="{!save}"/>
+            </apex:form>
+        </div>
+        
+        <div style="height: 380px; width: 100%; text-align: center">
+           
+        </div>
+        
+    
+    </body>
+         
+        
+    
+</apex:page>

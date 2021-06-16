@@ -36,6 +36,18 @@
         <members>*</members>
         <name>CustomObject</name>
     </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flexipage</name>
+    </types>
     <types>
         <members>*</members>
         <name>CustomTab</name>
@@ -64,13 +76,15 @@
         <members>Security</members>
         <name>Settings</name>
     </types>
+       <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    
     <types>
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>Workflow</name>
-    </types>
+    
     <version>51.0</version>
 </Package>

@@ -1,0 +1,109 @@
+header {
+    padding:10px 30%;
+    height: 5%;
+    background-color: #8d8d8d;
+}
+body{
+    background-color: #bce3f3;
+}
+img{
+    width: 250px;
+    height: 60px;
+}
+p{
+    font-size: 20px;
+    color: #bce3f3;
+    margin: 50px;
+}
+h1{
+    
+    font-size: 35px;
+    color: #bce3f3;
+    text-decoration: underline;
+}
+h2{
+    
+    font-size: 35px;
+    color: #bce3f3;
+    text-decoration: underline;
+}
+font{
+    color: #bce3f3;
+    font-size: 15px;
+    
+}
+#h1_div{
+    
+    margin: auto;
+    text-align: center;
+    background-color: #9f9f9f;
+    width:65%;
+    height: 350px;
+    border-radius: 25px;
+    
+    
+}
+#form_div{
+    
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #9f9f9f;
+    width:85%;
+    height: 580px;
+    border-radius: 25px;
+    background-image: url(houseSilo);
+   
+}
+
+#logo_div{
+    display: flex;
+    justify-content: center;
+}
+#navbar_div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #9f9f9f;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.nav_links li a:hover{
+    color: #191970;    
+    
+}
+.nav_links li a{
+    color: #bce3f3;    
+    
+}
+.nav_bar{
+    margin: auto;
+    width: 60%;
+}
+.cta{
+    padding-left: 48%;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+}
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_Built_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Year_Built__c &lt; 1800,  Year_Built__c &gt; 2021
+
+
+
+)</errorConditionFormula>
+    <errorMessage>Year must be greater than 1800 and can not be greater than current year</errorMessage>
+</ValidationRule>
