@@ -94,6 +94,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>OfferControllerExtension</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PropertyControllerExtension</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>RepairOrderController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Residents</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -111,6 +123,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SiteRegisterControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>fetchLease</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
@@ -276,6 +292,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lease__c.ResidentName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lease__c.Resident__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -435,6 +456,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Resident__c.Birthdate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Resident__c.Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Resident__c.First_Name__c</field>
         <readable>false</readable>
@@ -446,8 +477,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Resident__c.Lease_End__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Resident__c.Lease_Start__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Resident__c.Lease__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Resident__c.Phone__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <pageAccesses>
         <apexPage>AccountManagement</apexPage>
@@ -455,6 +501,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>AvailablePropertiesPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -514,7 +564,19 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>MakeOffer</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>MyProfilePage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>PartnershipPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>RepairOrderList</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -543,10 +605,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>UnderConstruction</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>PartnershipPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <tabVisibilities>

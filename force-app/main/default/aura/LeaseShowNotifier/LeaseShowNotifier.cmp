@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:registerEvent name="LeaseShowEvent" type="c:LeaseShow"/>
+            <lightning:button label="See Lease Details" onclick="{!c.fireComponentEvent}"/>
+</aura:component>

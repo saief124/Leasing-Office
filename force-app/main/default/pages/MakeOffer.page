@@ -17,10 +17,10 @@
         </nav>
     </div>
     
-	<apex:form>
-    	<apex:pageBlock>
+	<apex:form >
+    	<apex:pageBlock >
             
-            <apex:pageBlockSection>
+            <apex:pageBlockSection >
                 <apex:inputText value="{!fname}" label="First Name"/>
                 <apex:inputText value="{!lname}" label="Last Name"/>
                 <apex:inputText value="{!email}" label="Email"/>
@@ -29,7 +29,7 @@
                 <apex:commandButton action="{! saveOffer }" value="Submit Offer" />
             </apex:pageBlockSection>
             
-            <apex:pageBlockSection>
+            <apex:pageBlockSection >
                 <apex:commandButton action="{! viewListings }" value="Return to Listings" />
             </apex:pageBlockSection>
             
