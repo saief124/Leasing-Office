@@ -1,7 +1,0 @@
-<aura:event type="COMPONENT" description="Event template" >
-    <aura:attribute name="message" type="string"/>
-    <aura:attribute name="ld" type="Lease__c"/>
-    <!--Need to propogate the lease information 
-	
--->
-</aura:event>

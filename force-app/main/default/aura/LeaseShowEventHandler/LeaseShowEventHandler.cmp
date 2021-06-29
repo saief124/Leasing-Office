@@ -1,8 +1,0 @@
-<aura:component >
-    <aura:attribute name="eventmsg" type="string"/>
-    <aura:handler name="LeaseShowEvent" event="c:LeaseShow" action="{!c.handleComponentEvent}"/>
-    <c:LeaseShowNotifier/>
-    <div>
-    <p>Component event message: {!v.eventmsg}</p>
-    </div>
-</aura:component>
