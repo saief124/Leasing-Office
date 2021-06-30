@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <rules>
-        <fullName>Prepare for Move In</fullName> <!-- Action: Prepare_House Task -->
+        <fullName>Prepare for Move In</fullName>
         <active>true</active>
         <criteriaItems>
             <field>House__c.Status__c</field>

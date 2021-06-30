@@ -4,9 +4,4 @@
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>RepairOrderList</label>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>0</minorNumber>
-        <namespace>sb_security</namespace>
-    </packageVersions>
 </ApexPage>
