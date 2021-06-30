@@ -1,0 +1,290 @@
+.THIS {
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    width:100%;
+    min-height:700px;
+    background-color:#FFFFFF;
+}
+.THIS .body{
+    width:100%;
+    height:100%;
+    padding:3em;
+}
+.THIS header{
+    width:100%;
+    height:80px;
+    padding:1em;
+    overflow-y:hidden;
+    background-color:#c3dbee;
+}
+
+.THIS header .top-wrapper{
+    width:55%;
+}
+.THIS header .logo_div, .THIS header .label{
+    width:200px;
+}
+
+.THIS header .logo_div{
+    height:50px;
+    float:left;
+}
+
+.THIS header .label{
+    width:300px;
+    text-align:right;
+    line-height:50px;
+    font-weight:bold;
+    float:right;
+    font-size:1.7em;
+    font-family:Impact;
+    color:#006699;
+}
+
+.THIS header .logo_div img{
+    width:100%;
+    height:100%;
+}
+
+.THIS #container{
+    width:100%;
+    min-height:640px;
+    padding:1em;
+}
+
+.THIS .wrapper{
+    width:60%;
+    min-height:500px;
+    margin: 3em auto 0em auto;
+    background-color:#F5F7FA;
+    position:relative;
+}
+
+.THIS .wrapper .errors{
+     display:block;
+    width:100%;
+    height:35px;
+    border:1px solid transparent;
+    color: red;
+    text-align:center;
+    font-size:1.2em;
+    padding:1em 0px;
+}
+
+.THIS .slds-form-element__help, .THIS  .slds-form-element__helper, .THIS .wrapper .error{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.THIS .wrapper .error{
+       color: var(--lwc-colorTextError,rgb(234, 0, 30));
+     padding:5px 0px 0px 0px;
+                font-size: var(--lwc-fontSize2,0.25rem);
+}
+
+.THIS .wrapper .top{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.THIS .wrapper .top p{
+    padding:10px;
+    position: absolute;
+    font:1.5em Times;
+    animation: pLeftToRight 1s normal forwards ease-in-out;
+}
+
+.THIS .wrapper .top p span{
+    display:block;
+    line-height:35px;
+    text-indent: 50px;
+}
+.THIS .congrats{
+    width:100%;
+    height:100%;
+}
+.THIS .congrats .thank_you_note_wrapper{
+    position:relative;
+    
+}
+.THIS .congrats .thank_you_note_wrapper .thank_you_note{
+    padding:1em;
+    position: absolute;
+    overflow-y:hidden;
+    padding:3em 2em;
+    font-size:1.5em;
+    animation: bottomToTop 1s normal forwards ease-in-out;
+}
+.THIS .congrats .thank_you_note_wrapper h1{
+    text-align:center;
+    font-size:1.2em;
+    margin-bottom:1em;
+    text-decoration:underline;
+}
+.THIS .congrats .thank_you_note_wrapper button{
+    width:150px;
+    height:35px;
+    display:block;
+    font-size:0.7em;
+    margin:2em auto;
+    border-radius:5px;
+    background-color:#c3dbee;
+    color:#006699;
+    font-weight:bold;
+    border:1px solid #006699;
+}
+.THIS .wrapper .bottom{
+    width:70%;
+    padding:1em;
+    line-height:20px;
+    position:absolute;
+    bottom:0px;
+    left:30%;
+}
+
+.THIS .wrapper .bottom .button{
+    float:left;
+    width:100px;
+    height:100%;
+    margin-right:50px;    
+    border:1px solid transparent;
+}
+.THIS .wrapper .bottom .button button{
+    width:80px;
+    
+    border-radius:5px;
+    background-color:#FFFFFF;
+    border:2px solid #007799;
+}
+.THIS .wrapper .bottom .progress{
+    float:right;
+    width:100px;
+    height:20px;   
+}
+
+.THIS .wrapper .bottom .progress ul{
+    width:100%;
+    line-height:10px;
+    padding:0px;
+    margin:0px;
+    padding:5px 0px;
+    text-align:right;
+    overflow:hidden;
+}
+
+.THIS .wrapper .bottom .progress ul div{
+    display:inline-block;
+    margin-left:5px;
+    color:#fc0a12;
+    text-align:center;
+    width:10px;
+    height:10xp;
+    background-color:#fc0a12;
+    border-radius:100px;
+    
+}
+
+.THIS .wrapper .bottom .progress ul .currentStatus{
+    background-color:#78ad36;
+    color:#78ad36;
+}
+
+.THIS .active{
+    background-color:#FFFFFF;
+}
+
+.THIS .form{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:10px;    
+    left:20%;
+    overflow:hidden;
+    
+}
+.THIS .form h1{
+    text-align:center;
+    margin:0.5em 0px 1.5em 0em;
+    font:1.4em Times bold;
+    color:#446482;
+}
+
+.THIS .form .slds-input{
+    border-color:#000000;
+    border-radius:0px;
+}
+.THIS .slds-select_container .slds-select {
+    border:1px solid #000000;
+    border-radius:0px;
+    position:relative;
+}
+
+.THIS  .slds-select_container:before, .THIS .slds-select_container:after{
+    right:70px;
+    height: 4px;
+    z-index:100;
+    font-size:5em;
+}
+
+.THIS .form .form_wrapper{
+    padding-left:25%;
+}
+.THIS .form .input{
+    margin-bottom: 1em;
+}
+.THIS .form div label, .THIS .form div input{
+    display:block;
+}
+.THIS .form div input, .THIS .form div select{
+    width:80%;
+}
+
+@-o-keyframes pLeftToRight {
+    from{left:-100px;}
+    to{left:0px}
+    0% {opacity: 0;}
+    25% {left: 0.25;}
+    50% {left: 0.50;}
+    75% {left: 0.75;}
+    100% {left: 1;}
+}
+
+@-webkit-keyframes pLeftToRight {
+    from{left:-100px;}
+    to{left:0px}
+    0% {opacity: 0;}
+    25% {left: 0.25;}
+    50% {left: 0.50;}
+    75% {left: 0.75;}
+    100% {left: 1;}
+}
+
+@-moz-keyframes pLeftToRight {
+    from{left:-100px;}
+    to{left:0px}
+    0% {opacity: 0;}
+    25% {left: 0.25;}
+    50% {left: 0.50;}
+    75% {left: 0.75;}
+    100% {left: 1;}
+}
+
+@keyframes pLeftToRight {
+    from{left:-100px;}
+    to{left:0px}
+    0% {opacity: 0;}
+    25% {left: 0.25;}
+    50% {left: 0.50;}
+    75% {left: 0.75;}
+    100% {left: 1;}
+}
+
+
+@keyframes bottomToTop {
+    from{top:200px;}
+    to{top:80px}
+}
