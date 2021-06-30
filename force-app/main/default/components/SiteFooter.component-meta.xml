@@ -3,14 +3,4 @@
     <apiVersion>51.0</apiVersion>
     <description>Default Lightning Platform site footer component</description>
     <label>SiteFooter</label>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>7</minorNumber>
-        <namespace>sf_com_apps</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>1</minorNumber>
-        <namespace>trlhdtips</namespace>
-    </packageVersions>
 </ApexComponent>

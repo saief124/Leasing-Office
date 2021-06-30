@@ -1,0 +1,32 @@
+<aura:component controller="CampaignController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="repairs" type="Object[]" />
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name="sortedDirection" type="string" default="asc" />
+    <aura:attribute name="sortedBy" type="String" default="Name"/>
+    <aura:handler name="init" value ="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-p-around_medium">
+        <h1 class="slds-text-heading_large">Campaigns Table</h1>
+    </div>
+   <!--<lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.repairs}"
+            keyField="Id"
+            hideCheckboxColumn="true"
+            
+        />-->
+    <lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.repairs}"
+            keyField="Id"
+            hideCheckboxColumn="true"
+            onsort="{!c.updateSorting}"       
+            sortedBy="{!v.sortedBy}"
+            sortedDirection="{!v.sortedDirection}"
+            draftValues="{!v.draftValues}"
+            onsave="{!c.handleSave}"
+        />
+    
+    
+</aura:component>

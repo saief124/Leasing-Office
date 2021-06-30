@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="fields"
+                    type="String[]"
+                    default="['Name', 'StartDate', 'EndDate', 'ExpectedRevenue', 'BudgetedCost', 'Type', 'Status']"/>
+
+    <!-- Displays toast notifications -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    <lightning:recordForm
+        objectApiName="Campaign"
+        fields="{!v.fields}"
+        onerror="{!c.handleError}"
+		onsubmit="{!c.refresh}"/>
+    <!--<lightning:button label="Refresh page" onclick="{!c.refresh}" />-->
+</aura:component>
