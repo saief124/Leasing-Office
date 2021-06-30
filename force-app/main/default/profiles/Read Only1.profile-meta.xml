@@ -864,6 +864,8 @@
         <field>Resident__c.Lease__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Resident__c.Lease_End__c</field>
         <readable>true</readable>
     </fieldPermissions>

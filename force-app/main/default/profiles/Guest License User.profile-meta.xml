@@ -824,6 +824,8 @@
         <editable>true</editable>
         <field>Partnership_Request__c.Zip_Code__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Partnership_Request__c.Address__c</field>
         <readable>false</readable>
@@ -1083,7 +1085,6 @@
         <tab>Resident__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
-    <userLicense>Guest User License</userLicense>
     <tabVisibilities>
         <tab>standard-Campaign</tab>
         <visibility>DefaultOn</visibility>
@@ -1092,7 +1093,6 @@
         <tab>standard-Case</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
-    <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
