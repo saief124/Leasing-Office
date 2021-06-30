@@ -644,13 +644,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
-<<<<<<< HEAD
-=======
         <tab>Offer__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
->>>>>>> Dev
         <tab>Partnership_Request__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
