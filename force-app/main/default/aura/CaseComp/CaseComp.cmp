@@ -1,0 +1,34 @@
+<aura:component controller="CaseController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="repairs" type="Object[]" />
+    <aura:attribute name="sortedDirection" type="string" default="asc" />
+    <aura:attribute name="sortedBy" type="String" default="Name"/>
+    <aura:handler name="init" value ="{!this}" action="{!c.doInit}" />
+    
+    
+     <!--Name, Date_Opened__c, House__c, Cost__c, Status__c-->
+    <div class="slds-p-around_medium">
+        <h1 class="slds-text-heading_large">Repair Orders Table</h1>
+    </div>
+    <!--<lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.repairs}"
+            keyField="Id"
+            hideCheckboxColumn="true"
+            draftValues="{!v.draftValues}"
+            onsave="{!c.handleSave}"
+        />-->
+   
+    <lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.repairs}"
+            keyField="Id"
+            hideCheckboxColumn="true"
+            onsort="{!c.updateSorting}"       
+            sortedBy="{!v.sortedBy}"
+            sortedDirection="{!v.sortedDirection}"
+        />
+    
+    
+    
+</aura:component>
