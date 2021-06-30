@@ -6,7 +6,12 @@
     <label>RepairOrderList</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>0</minorNumber>
-        <namespace>sb_security</namespace>
+        <minorNumber>7</minorNumber>
+        <namespace>sf_com_apps</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>1</minorNumber>
+        <namespace>trlhdtips</namespace>
     </packageVersions>
 </ApexPage>
