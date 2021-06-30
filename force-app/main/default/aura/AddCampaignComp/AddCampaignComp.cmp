@@ -5,6 +5,9 @@
 
     <!-- Displays toast notifications -->
     <lightning:notificationsLibrary aura:id="notifLib" />
+    <div class="slds-p-around_medium">
+        <h2 class="slds-text-heading_medium">Add new Campaign</h2>
+    </div>
     <lightning:recordForm
         objectApiName="Campaign"
         fields="{!v.fields}"

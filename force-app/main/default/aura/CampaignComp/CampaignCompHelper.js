@@ -7,7 +7,6 @@
             {label: 'Name', fieldName: 'Name', type: 'text', sortable: "True"},
             {label: 'Start Date', fieldName: 'StartDate', type: 'date', sortable: "True", editable: "True"},
             {label: 'Start Date', fieldName: 'StartDate', type: 'date', sortable: "True", editable: "True"},
-            {label: 'Number Of Responses', fieldName: 'NumberOfResponses', type: 'decimal', sortable: "True", editable: "True"},
             {label: 'Expected Revenue', fieldName: 'ExpectedRevenue', type: 'currency', sortable: "True", editable: "True"},
             {label: 'Budgeted Cost', fieldName: 'BudgetedCost', type: 'currency', sortable: "True", editable: "True"},
             {label: 'Actual Revenue', fieldName: 'ActualRevenue__c', type: 'currency', sortable: "True", editable: "True"},
