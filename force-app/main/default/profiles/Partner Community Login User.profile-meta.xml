@@ -126,6 +126,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ProspectiveResidentsController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>RepairOrderController</apexClass>
         <enabled>false</enabled>
     </classAccesses>

@@ -110,6 +110,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ProspectiveResidentsController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>RepairOrderController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -600,6 +604,10 @@
     <tabVisibilities>
         <tab>Mortgage__c</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Offer__c</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Partnership_Request__c</tab>
