@@ -34,6 +34,8 @@
     </types>
     <types>
         <members>*</members>
+        <members>Case</members>
+        <members>Campaign</members>
         <name>CustomObject</name>
     </types>
      <types>
@@ -85,6 +87,6 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    
+
     <version>51.0</version>
 </Package>

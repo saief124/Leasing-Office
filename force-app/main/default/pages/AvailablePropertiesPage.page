@@ -16,8 +16,8 @@
             </ul>
         </nav>
     </div>
-    <apex:form>
-        <apex:pageBlock>
+    <apex:form >
+        <apex:pageBlock >
             
             <apex:actionFunction action="{! makeOffer }" name="makeOffer" rerender="all">
                 <apex:param value="" name="propId" assignTo="{!propIdChosen}"/>
@@ -27,7 +27,7 @@
                 <apex:pageBlockTable value="{!props}" var="prop">
                     <apex:column value="{!prop.name}"/>
                     <apex:column value="{!prop.Street_Address__c}"/>
-                    <apex:column value="{!prop.price__c}"/>
+                    <apex:column value="{!prop.Price__c}"/>
                     <apex:column >
                         <button onclick="makeOffer('{!prop.Id}');">Make Offer</button>
                     </apex:column>

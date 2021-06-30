@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fields"
+                    type="String[]"
+                    default="['Subject', 'DateCreated', 'House__c', 'Priority', 'Status']"/>
+
+    <!-- Displays toast notifications -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    <lightning:recordForm
+        objectApiName="Case"
+        fields="{!v.fields}"
+        onerror="{!c.handleError}"
+        onsubmit="{!c.refresh}"/>
+</aura:component>

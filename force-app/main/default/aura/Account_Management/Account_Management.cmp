@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="Residents" >
+    <aura:attribute name="resi" type="Id[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+		<div>
+                <lightning:accordion aura:id="accordion">
+                    <aura:iteration items="{!v.resi}" var="r">
+                        <lightning:accordionSection label="My Information">
+                            <c:Resident_Item resiId="{!r}"/>
+                        </lightning:accordionSection>	
+                    </aura:iteration>
+    			</lightning:accordion>
+        </div>
+
+
+
+    	
+    
+</aura:component>

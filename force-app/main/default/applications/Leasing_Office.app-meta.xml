@@ -27,6 +27,7 @@
     <tabs>Bank__c</tabs>
     <tabs>Inspection__c</tabs>
     <tabs>Partnership_Request__c</tabs>
+    <tabs>Offer__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Leasing_Office_UtilityBar</utilityBar>
 </CustomApplication>

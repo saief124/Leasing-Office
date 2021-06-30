@@ -1,0 +1,66 @@
+<aura:component controller="ProspectiveResidentsController">
+    <aura:attribute name="salutationOptions" type="List" default="[
+        {'label': 'Mr.', 'value': 'Mr.'},
+        {'label': 'Ms.', 'value': 'Ms.'},
+        {'label': 'Mrs.', 'value': 'Mrs.'},
+        {'label': 'Dr.', 'value': 'Dr.'},
+        {'label': 'Prof.', 'value': 'Prof.'},
+    ]"/>
+    <aura:attribute name="newContact" type="Contact"
+                    default="{'sobjectType': 'Contact',
+                   'Title': '',
+                   'FirstName': '',
+                   'LastName': '',
+                   'Email': ''}" />
+    <aura:attribute name="contactMessage" type="String" default=""/>
+    
+    <aura:attribute name="offerMessage" type="String" default=""/>
+    <aura:attribute name="contactList" type="Contact[]" default="[]"/>
+    <aura:attribute name="houseList" type="Property__c[]" default="[]"/>
+    <aura:handler value="{!this}" name="init" action="{!c.doInit}" />
+    <aura:attribute name="newOffer" type="Offer__c"
+                    default="{'Property__c': '',
+                    'Contact__c': '',
+                    'Offer_Amount__c': ''}"/>
+    
+    <lightning:card iconName="custom:custom15" title="Add a Contact">
+        <div class="slds-p-around_medium">
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:inputName aura:id="resident"
+                                         label="Contact Name"
+                                         firstName="{!v.newContact.FirstName}"
+                                         lastName="{!v.newContact.LastName}"
+                                         salutation="{!v.newContact.Title}"
+                                         options="{!v.salutationOptions}"
+                                         required="true"/>
+                    <lightning:input aura:id="resident" label="Email" type="email" value="{!v.newContact.Email}"/>
+                    <lightning:button label="Create Contact" onclick="{!c.handleCreateContact}" variant="brand" class="slds-m-top_medium"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <p>{!v.contactMessage}</p>
+        </div>
+    </lightning:card>
+    
+    <lightning:card iconName="custom:custom85" title="Make an Offer">
+        <div class="slds-p-around_medium">
+            <lightning:layout>
+            	<lightning:layoutItem size="4" padding="around-small">
+                	<lightning:select aura:id="house" name="house" label="Select a House" onchange="{!c.onHouseChange}" required="true">
+                        <aura:iteration items="{!v.houseList}" var="house">
+                			<option text="{!house.Name}" value="{!house.Id}"></option>
+            			</aura:iteration>
+    				</lightning:select>
+                	<lightning:select aura:id="contact" name="contact" label="Select a contact" onchange="{!c.onContactChange}" required="true">
+                        <aura:iteration items="{!v.contactList}" var="contact">
+                			<option text="{!contact.Name}" value="{!contact.Id}"></option>
+            			</aura:iteration>
+    				</lightning:select>
+                    <lightning:input type="number" name="offer" label="Offer" value="{!v.newOffer.Offer_Amount__c}" formatter="currency" step="0.01"/>
+                    <lightning:button label="Send Offer" onclick="{!c.handleCreateOffer}" variant="brand" class="slds-m-top_medium"/>
+            	</lightning:layoutItem>
+            </lightning:layout>
+            <p>{!v.offerMessage}</p>
+        </div>
+    </lightning:card>
+</aura:component>
