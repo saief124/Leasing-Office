@@ -149,7 +149,7 @@
                     
                     <div class="progress">
                         <ul>
-                            <aura:if isTrue="{!lessthan(v.iterator,3)}">
+                            <aura:if isTrue="{!lessthan(v.iterator,4)}">
                                 <aura:if isTrue="{!v.iterator >= 0}">
                                     <div class="currentStatus">0</div>
                                     <aura:set attribute="else"> 
