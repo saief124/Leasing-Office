@@ -36,7 +36,7 @@ public class PartnershipProgramTest {
         String stateSelected= 'NY'; 
         String zipCode = '12345';
         String yearBuilt= '1900';
-        String yearsOwn= '';
+        String yearsOwn= ''; 
         String buildingStatusSelected = 'New Construction';
         final PartnershipProgram.OperationResult result = PartnershipProgram.savePartnershipProgramData(name, email, phone, address, city, 
                                                                             stateSelected, zipCode, yearBuilt, yearsOwn,
