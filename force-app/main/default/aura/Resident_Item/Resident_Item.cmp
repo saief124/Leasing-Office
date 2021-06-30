@@ -1,0 +1,36 @@
+<aura:component >
+	 <aura:attribute name="resiId" type="ID" />
+
+        <!-- Record Display -->
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+      
+        <lightning:recordViewForm recordId="{!v.resiId}" objectApiName="Resident__c">
+        <div class="slds-box" style="background-color:#BCE3F3; font-style: italic">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Birthdate__c" />
+            <lightning:outputField fieldName="Phone__c" class="links" />
+			<lightning:outputField fieldName="Email__c" class="links" />
+            <lightning:outputField fieldName="Lease__c"/>
+            <lightning:outputField fieldName="Lease_Start__c"/>
+            <lightning:outputField fieldName="Lease_End__c"/>
+        </div>
+    </lightning:recordViewForm>
+    </div>
+    <!-- Record Edit -->
+    Edit my information
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px;" >
+        
+        <lightning:recordEditForm aura:id="recordEditForm"
+                                     recordId="{!v.resiId}"
+                                     objectApiName="Resident__c">
+            <lightning:messages />
+            <lightning:inputField fieldName="Birthdate__c" />
+            <lightning:inputField fieldName="Phone__c" />
+			<lightning:inputField fieldName="Email__c" />
+            <lightning:button aura:id="submit" type="submit" label="Update Record" class="slds-m-top_medium" />
+            </lightning:recordEditForm>
+    </div>
+
+        
+
+</aura:component>
