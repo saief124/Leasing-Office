@@ -100,6 +100,7 @@
             })
             action.setCallback(this, function(response){
                 let responseState = response.getState();
+                console.log(responseState);
                 if(responseState == 'SUCCESS'){
                     component.set("v.errors", "")
                     this.PartnershipRequest = this.resetDataModel();
@@ -169,7 +170,9 @@
         
         let statusIsInValid = this.validateBuildingStatus(component);
         
-        return yearBuiltIsValid && !yearsOwnIsInValid && !statusIsInValid;
+        let validDates = this.validateBuildYearAndYearOwned(component);
+        
+        return validDates &&  yearBuiltIsValid && !yearsOwnIsInValid && !statusIsInValid;
         
     },
     
@@ -271,6 +274,22 @@
             component.set('v.buildingStatusError','Please select building status');
         } else { component.set('v.buildingStatusError','');}
         return statusIsInValid;
+    },
+    
+    validateBuildYearAndYearOwned: function(component){
+        let yearBuiltValue = component.find("yearBuilt").get("v.value");
+        let yearsOwnValue = component.find("yearsOwn").get("v.value");
+        if(yearBuiltValue !== '' && yearsOwnValue !== ''){
+            let result = parseInt(yearBuiltValue) + parseInt(yearsOwnValue);
+           let year = new Date().getFullYear();
+            if(result > year){
+                component.set('v.errors', 'There\'s no way you owned this property before it was built.')
+                return false;
+            }else{
+                component.set('v.errors', '');
+            }
+        }
+        return true;
     },
     
     resetDataModel: function(){

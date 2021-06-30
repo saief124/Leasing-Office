@@ -64,6 +64,9 @@
     position:relative;
 }
 
+.THIS .slds-form-element__help, .THIS  .slds-form-element__helper, .THIS .wrapper .error, .THIS .wrapper .errors{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
 .THIS .wrapper .errors{
      display:block;
     width:100%;
@@ -71,12 +74,8 @@
     border:1px solid transparent;
     color: red;
     text-align:center;
-    font-size:1.2em;
+    font-size:1em;
     padding:1em 0px;
-}
-
-.THIS .slds-form-element__help, .THIS  .slds-form-element__helper, .THIS .wrapper .error{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 .THIS .wrapper .error{
