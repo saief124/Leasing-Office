@@ -1,0 +1,188 @@
+<aura:component controller="PartnershipProgram" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="iterator" type="Integer" default="0"/>
+    <aura:attribute name="errors" type="String" default=""/>
+    <aura:attribute name="stateError" type="String" default=""/>
+    <aura:attribute name="buildingStatusError" type="String" default=""/>
+    <aura:attribute name="PartnershipRequest" type="Map" default="{}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="body">
+        <header>
+            <section class="top-wrapper">
+                <div class="logo_div">
+                    <img src="{!$Resource.LeaseLogo}"/>
+                </div> 
+                <div class="label">
+                    <span>
+                        <aura:if isTrue="{!v.iterator == 0}">
+                            About Partnership Program 
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.iterator > 0 , lessthan(v.iterator,4))}">
+                            Request Partnership Program
+                        </aura:if>
+                         <aura:if isTrue="{!v.iterator == 4}">
+                            Request Submitted 
+                        </aura:if>
+                    </span>
+                </div>
+            </section>
+        </header>
+        
+        <div id="container">
+            <section class="wrapper">
+                <span class="errors">{!v.errors}</span>
+                <div class="top">
+                    <aura:if isTrue="{!v.iterator == 0}">
+                        <p class="first">
+                            <span>
+                                The partnership program is open to any resident or friends/family of the resident that owns property and wants
+                                the McLeaserson Management Co. to manage said property.
+                            </span>
+                            <span>
+                                The request process is easy. All you have to do is fill out the
+                                form at the bottom of this page, await for our approval, and from there we can take the next few steps to get everything in
+                                order so we can provide the best service to you or anyone you refer to us. All details about how everything works will be given
+                                after the approval process.
+                            </span>
+                        </p>
+                    </aura:if>
+                    <aura:if isTrue="{!v.iterator == 1}">
+                        <div class="form second">
+                            <h1>Personal Infomation</h1>
+                            <form>
+                                <div class="form_wrapper">
+                                    <div class="input">
+                                        <label>Name:</label>
+                                        <lightning:input aura:id="name" class="input"  type="text" value="{!v.PartnershipRequest.name}" onblur="{!c.valiateName}"/>
+                                    </div>
+                                    <div class="input">
+                                        <label>Email:</label>
+                                        <lightning:input aura:id="email" class="input" type="text" value="{!v.PartnershipRequest.email}"  onblur="{!c.valiateEmail }" />
+                                    </div>
+                                    <div class="input">
+                                        <label>Phone Number:</label>
+                                        <lightning:input aura:id="phone" type="text" value="{!v.PartnershipRequest.phone}" onblur="{!c.validatePhoneNumber }" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.iterator == 2}">
+                        <div class="form third">
+                            <h1>Address Infomation</h1>
+                            <form>
+                                <div class="form_wrapper">
+                                    <div class="input">
+                                        <label>Address:</label>
+                                        <lightning:input aura:id="address" type="text" value="{!v.PartnershipRequest.address}"  onblur="{!c.validateAddress }"/>
+                                    </div>
+                                    <div class="input">
+                                        <label>City:</label>
+                                        <lightning:input aura:id="city" type="text" value="{!v.PartnershipRequest.city}" onblur="{!c.validateCity }" />
+                                    </div>
+                                    <div class="input">
+                                        <label>State:</label>
+                                        <lightning:select   aura:id="stateId" value="{!v.PartnershipRequest.stateSelected}" onchange="{!c.validateState }">
+                                            <option value="">Choose a state</option>
+                                            <aura:iteration items="{!v.PartnershipRequest.states}" var="state">
+                                                <option value="{!state}">{!state}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        <span class="error">{!v.stateError}</span>
+                                    </div>
+                                    <div class="input">
+                                        <label>Zip Code:</label>
+                                        <lightning:input aura:id="zipCode" type="text" value="{!v.PartnershipRequest.zipCode}" onblur="{!c.validateZipCode }"  />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.iterator == 3}">
+                        <div class="form fourth">
+                            <h1>Building Infomation</h1>
+                            <form> 
+                                <div class="form_wrapper">
+                                    <div class="input">
+                                        <label>Year Built:</label>
+                                        <lightning:input aura:id="yearBuilt" type="text" value="{!v.PartnershipRequest.yearBuilt}" onblur="{!c.validateYearBuilt }" />
+                                    </div>
+                                    <div class="input">
+                                        <label>Years owned:</label>
+                                        <lightning:input aura:id="yearsOwn" type="text" value="{!v.PartnershipRequest.yearsOwn}" onblur="{!c.validateYearsOwn }"/>
+                                    </div>
+                                    <div class="input">
+                                        <label>Build Status:</label>
+                                        <lightning:select aura:id="status" value="{!v.PartnershipRequest.buildingStatusSelected}" onchange="{!c.validateBuildingStatus }">
+                                            <option value="">Choose a status</option>
+                                            <aura:iteration items="{!v.PartnershipRequest.buildStatuses}" var="status">
+                                                <option value="{!status}">{!status}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        <span class="error">{!v.buildingStatusError}</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.iterator == 4}">
+                        <div class="congrats">
+                            <div class="thank_you_note_wrapper"> 
+                                <div class="thank_you_note">
+                                    <h1>Congratulations!</h1>
+                                    <div>
+                                        You have successfully submitted your request. A member of our team will be in touch with you
+                                        to discuss the next step. 
+                                    </div>
+                                    <button onclick="{!c.submitNewRequest}" >Submit new request</button>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:if>
+                </div>
+                <div class="bottom">
+                    <div class="button"><aura:if isTrue="{!and(v.iterator > 0 , lessthan(v.iterator,4))}"><button onclick="{!c.goToPrevious}" >Previous</button></aura:if></div>
+                    <aura:if isTrue="{!v.iterator == 3 }">
+                        <div class="button"><button onclick="{!c.submit}" >Submit</button></div>
+                    </aura:if>
+                    <aura:if isTrue="{!lessthan(v.iterator,3)}">
+                        <div class="button"><button onclick="{!c.goToNext}" >Next</button></div>
+                    </aura:if>
+                    
+                    <div class="progress">
+                        <ul>
+                            <aura:if isTrue="{!lessthan(v.iterator,4)}">
+                                <aura:if isTrue="{!v.iterator >= 0}">
+                                    <div class="currentStatus">0</div>
+                                    <aura:set attribute="else"> 
+                                        <div >0</div>
+                                    </aura:set>  
+                                </aura:if>
+                                
+                                <aura:if isTrue="{!v.iterator >= 1}">
+                                    <div class="currentStatus">1</div>
+                                    <aura:set attribute="else"> 
+                                        <div >1</div>
+                                    </aura:set>  
+                                </aura:if>
+                                <aura:if isTrue="{!v.iterator >= 2}">
+                                    <div class="currentStatus">2</div>
+                                    <aura:set attribute="else"> 
+                                        <div >2</div>
+                                    </aura:set>  
+                                </aura:if>
+                                <aura:if isTrue="{!v.iterator >= 3}">
+                                    <div class="currentStatus">3</div>
+                                    <aura:set attribute="else"> 
+                                        <div >3</div>
+                                    </aura:set>  
+                                </aura:if>
+                            </aura:if>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>        
+    </div>
+</aura:component>
