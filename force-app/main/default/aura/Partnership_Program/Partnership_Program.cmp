@@ -17,9 +17,12 @@
                     <span>
                         <aura:if isTrue="{!v.iterator == 0}">
                             About Partnership Program 
-                            <aura:set attribute="else"> 
-                                Request Partnership Program 
-                            </aura:set>  
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.iterator > 0 , lessthan(v.iterator,4))}">
+                            Request Partnership Program
+                        </aura:if>
+                         <aura:if isTrue="{!v.iterator == 4}">
+                            Request Submitted 
                         </aura:if>
                     </span>
                 </div>
@@ -86,7 +89,7 @@
                                                 <option value="{!state}">{!state}</option>
                                             </aura:iteration>
                                         </lightning:select>
-                                         <span class="error">{!v.stateError}</span>
+                                        <span class="error">{!v.stateError}</span>
                                     </div>
                                     <div class="input">
                                         <label>Zip Code:</label>
