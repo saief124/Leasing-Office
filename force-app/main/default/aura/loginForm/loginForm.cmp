@@ -1,5 +1,5 @@
 <!-- add implements="forceCommunity:availableForAllPageTypes" to surface the component in community builder -->
-<aura:component controller="LightningLoginFormController">
+<aura:component controller="LightningLoginFormController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
     <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
     <aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
     <aura:attribute name="startUrl" type="String" required="false" description="The url you go to after a successful login" />
@@ -27,7 +27,9 @@
     <aura:handler event="c:setStartUrl" action="{!c.setStartUrl}"/>
     <aura:handler event="c:setExpId" action="{!c.setExpId}"/>    
     <aura:dependency resource="c:setExpId" type="EVENT"/>  
-    
+    <div class="slds-p-around_medium">
+        <h1 class="slds-text-heading_large">Log in</h1>
+    </div>
     <div>
         <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
             <span>

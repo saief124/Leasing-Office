@@ -1,4 +1,4 @@
-<aura:component controller="ProspectiveResidentsController">
+<aura:component controller="ProspectiveResidentsController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
     <aura:attribute name="salutationOptions" type="List" default="[
         {'label': 'Mr.', 'value': 'Mr.'},
         {'label': 'Ms.', 'value': 'Ms.'},
