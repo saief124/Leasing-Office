@@ -48,9 +48,9 @@ Steps to port
 
 ## Contributors
 
-> Nathan Tellez
-> Laurent Sanou
-> Saief Sayed
+> Nathan Tellez,
+> Laurent Sanou,
+> Saief Sayed, and
 > James Patton
 
 ## License
