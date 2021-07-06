@@ -9,8 +9,8 @@ An application that is used to manage all the related functionalities of the lea
 * Salesforce - version 49.0
 * Apex - version 33.0
 * SOQL - version 52.0
-* xml version 1.0
-* Aura 
+* xml - version 1.0
+* Aura - version 52.0
 
 ## Features
 
@@ -22,6 +22,9 @@ List of features ready and TODOs for future development
 * Manage Campaigns- Allows internal users to make new campaigns and manage their existing campaigns
 
 To-do list:
+ * Enable community members to log in and view their information
+ * Enable creating leads and assigning them to campaigns in the site
+ * Ensure stylistic choices match
 
 
 ## Getting Started
@@ -31,7 +34,12 @@ Steps to port
   2. Authorize Visual Studio Code into the playground created in step 1
   3. Pull git hub repository into playground created in step 1 
   4. Comment out Network CustomSite and ExperienceBuilder associated code from package.xml
-  5. Deploy to org fixing each issue as run into with reference down bottom.
+  5. Deploy to org fixing each issue as run into.
+  6. Create Experience cloud Site 
+  7. Colors: Nav Overlay color `rgb(159, 159, 159)`, Nav Border Divider Color `rgba(0, 15, 89, 0.8)`, Nav Border Color, `rgb(130, 117, 102)`, and Nav link color `rgb(188, 227, 243)`
+  8. Add pages to components `CaseComp`, `AddCaseComp`, `Account_Management`, `Partnership_Program`, `CampaignComp`, and `AddCampaignComp` to sitepages.
+  9. Add the pages to navigation menue
+  10. Add logo in Theme Images
     
    
 ## Usage
