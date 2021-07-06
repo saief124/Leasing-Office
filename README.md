@@ -43,7 +43,7 @@ Steps to port
     
    
 ## Usage
-
+ > Set up Leasing Office to be default application, add tab for Campaigns. Add desired items to each page layout. 
 
 
 ## Contributors
