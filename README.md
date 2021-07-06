@@ -1,30 +1,50 @@
-# Salesforce DX Project: Next Steps
+# Leasing Office
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Project Description
 
-## How Do You Plan to Deploy Your Changes?
+An application that is used to manage all the related functionalities of the leasing management company.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Technologies Used
 
-## Configure Your Salesforce DX Project
+* Salesforce - version 49.0
+* Apex - version 33.0
+* SOQL - version 52.0
+* xml version 1.0
+* Aura 
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Features
 
-## Read All About It
+List of features ready and TODOs for future development
+* Account Management- Residents can view their information and edit some information if it changes.
+* Repair Order - Residents can view the status of their repair order and make new repair orders.
+* Prospective Residents - Allows prospective residents to make a new offer on a house to lease.
+* Partnership Program - Allows residents or their friends to submit properties they own to be managed by the leasing company.
+* Manage Campaigns- Allows internal users to make new campaigns and manage their existing campaigns
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+To-do list:
+
+
+## Getting Started
+   
+Steps to port
+  1. Create new playground
+  2. Authorize Visual Studio Code into the playground created in step 1
+  3. Pull git hub repository into playground created in step 1 
+  4. Comment out Network CustomSite and ExperienceBuilder associated code from package.xml
+  5. Deploy to org fixing each issue as run into with reference down bottom.
+    
+   
+## Usage
 
 
 
-Fixing errors for merging
-manage css error
-   removed them
-user license
-   removed it
-ViewGlobalHeader Error
-  removed from three custom%3A profiles
-ManageTranslation permission error 
-   removed ManageTranslation, ManagePartners from 
+## Contributors
+
+> Nathan Tellez
+> Laurent Sanou
+> Saief Sayed
+> James Patton
+
+## License
+
+All rights reserved 2021 
